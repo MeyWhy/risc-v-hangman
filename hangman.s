@@ -4,14 +4,13 @@
 .global _start
 .section .text
 _start:
-        /*instantiate a random word
+        /*ask for input*/
         li a0, 1
-        la a1, secret
-        li a2, 7
+        la a1, input
+        li a2, 55
         li a7, Write
-        ecall*/
+        ecall
 
-        /*print out line break*/
         li s0, 0
         li s1, 5
 start_read_input:
@@ -75,6 +74,8 @@ exit:
 
 
 .section .data
+input: .asciz "Try to guess the secret word in less than 5 attempts:\n"
+newline: .asciz "\n"
 secret: .asciz "fragile"
 guess: .space 8
 success: .asciz "SUCCESS"
