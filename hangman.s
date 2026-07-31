@@ -4,12 +4,12 @@
 .global _start
 .section .text
 _start:
-        /*instantiate a random word*/
+        /*instantiate a random word
         li a0, 1
         la a1, secret
         li a2, 7
         li a7, Write
-        ecall
+        ecall*/
 
         /*print out line break*/
         li s0, 0
